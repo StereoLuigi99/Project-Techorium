@@ -25,3 +25,15 @@ Eğer 113.0 ve üstüyse aşağıdaki adımları takip edin:
 - Sağ üst menüden eklenti kendini gösterecek, altında küçük bir bildirim kutusu ile, eklentiye tıklayın.
 - Eklentiye Techolay'da okuma ve düzenleme yapma yetkisi verin.
 Bu GIF fotoğrafları kullanıcı tarafında bir değişiklik olup sunucuyu kastırmaz, o konuda içiniz rahat olsun.
+
+## Resimler/Ekran Görüntüleri
+
+![image](https://github.com/StereoLuigi99/Project-Techorium/assets/166461481/d1747c2e-4697-4323-b64b-94ff3f83662d)
+![image](https://github.com/StereoLuigi99/Project-Techorium/assets/166461481/4bc33c60-5996-443f-b94a-212fbcd1ef66)
+
+## Emeği Geçenler
+- GIF eklentisini hazırladığı için Nizel G'ye,
+- Techolay için mükemmel bir konsept logo hazırladığı için DijitalFikir'e,
+- İşletim sistemi kategori ikonlarında yardım ettiği için Vavien.'e özel teşekkürlerimi sunarım.
+
+Kısacası klentimi destekleyen ve kullanan herkese sonsuz teşekkürler! <3
