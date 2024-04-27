@@ -51,7 +51,7 @@ Bu GIF fotoğrafları kullanıcı tarafında bir değişiklik olup sunucuyu kast
 - Eklentinin çıkartıldığı klasörü seçin.
 
 ## Emeği Geçenler
-- GIF eklentisini hazırladığı için Nizel G'ye,
+- Technopat'taki GIF eklentisini hazırladığı için Nizel G'ye,
 - Techolay için mükemmel bir konsept logo hazırladığı için DijitalFikir'e,
 - İşletim sistemi kategori ikonlarında yardım ettiği için Vavien.'e özel teşekkürlerimi sunarım.
 
