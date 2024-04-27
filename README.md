@@ -55,4 +55,4 @@ Bu GIF fotoğrafları kullanıcı tarafında bir değişiklik olup sunucuyu kast
 - Techolay için mükemmel bir konsept logo hazırladığı için DijitalFikir'e,
 - İşletim sistemi kategori ikonlarında yardım ettiği için Vavien.'e özel teşekkürlerimi sunarım.
 
-Kısacası klentimi destekleyen ve kullanan herkese sonsuz teşekkürler! <3
+Kısacası eklentimi destekleyen ve kullanan herkese sonsuz teşekkürler! <3
