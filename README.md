@@ -2,7 +2,6 @@
 Evet, o eklenti yapan Mario'yu hatırlıyor musunuz? Herhalde hayır ama o benim.
 2024 öncesi Project TechnOSpat ve Project Quettapat'tan sonra üçlemeyi bitirecek eklenti artık burada.
 
-Evet, belki hiç kimse fark etmeyecek ve görüntülenme 1.000'i bile geçemeyecek ama olsun.
 Eklentinin getirdiği başlıca özellikler şunlar:
 
 - GIF profil fotoğrafları (Nizel G'nin orijinal kodu Techolay için revize edildi.)
