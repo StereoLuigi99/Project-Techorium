@@ -183,3 +183,9 @@ img.unknown {
     width: 16px;
     height: 16px;
 }
+
+img.linux-archlinux {
+    background: url("chrome-extension://__MSG_@@extension_id__/osbrowser/common.png") -182px -108px;
+    width: 16px;
+    height: 16px;
+}
