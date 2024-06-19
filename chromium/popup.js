@@ -104,11 +104,11 @@ window.onload = async function () {
     chrome.storage.local.set({ ["usertheme"]: e.target.value });
   });
 
-  var url = "https://visual917.github.io/versions/ahmet.d";
+  var url = "https://visual917.github.io/versions/ahmet.txt";
   var res = await fetch(url);
   var data = await res.text();
   var currentVersion = "1.42";
-  var newVersion = data;
+  var newVersion = data.trim();
   console.log("compar", currentVersion, newVersion);
   console.log("compar", currentVersion.length, newVersion.length);
   console.log("compar", typeof currentVersion, typeof newVersion);
