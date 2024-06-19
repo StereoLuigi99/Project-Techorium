@@ -52,6 +52,7 @@ Bu GIF fotoğrafları kullanıcı tarafında bir değişiklik olup sunucuyu kast
 ## Emeği Geçenler
 - Technopat'taki GIF eklentisini hazırladığı için Nizel G'ye,
 - Techolay için mükemmel bir konsept logo hazırladığı için DijitalFikir'e,
-- İşletim sistemi kategori ikonlarında yardım ettiği için Vavien.'e özel teşekkürlerimi sunarım.
+- İşletim sistemi kategori ikonlarında yardım ettiği için Vavien.'e,
+- Eklentiyi optimize etmekte büyük katkısı olan Yonga'ya sonsuz teşekkürlerimi sunarım.
 
 Kısacası eklentimi destekleyen ve kullanan herkese sonsuz teşekkürler! <3
