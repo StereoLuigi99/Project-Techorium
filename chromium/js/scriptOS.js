@@ -13,45 +13,30 @@ document.addEventListener("DOMContentLoaded", async function (event) {
       height: 34,
     },
     {
-<<<<<<< HEAD
       selector: ".node--id54 .xfa-nit-node-icon i",
-=======
-      selector: ".node--id54 .xfa-nit-node-icon .fa-folder-open",
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
       src: "icons/windows/win8/full.png",
       width: 34,
       height: 34,
     },
     {
-<<<<<<< HEAD
       selector: ".node--id55 .xfa-nit-node-icon i",
-=======
-      selector: ".node--id55 .xfa-nit-node-icon .fa-folder",
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
       src: "icons/windows/win7/full.png",
       width: 34,
       height: 34,
     },
     {
-<<<<<<< HEAD
       selector: ".node--id56 .xfa-nit-node-icon i",
-=======
-      selector: ".node--id56 .xfa-nit-node-icon .fa-folder-minus",
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
       src: "icons/windows/win-other/full.png",
       width: 34,
       height: 34,
     },
     {
-<<<<<<< HEAD
       selector: ".node--id305 .xfa-nit-node-icon-small .fa-apple",
       src: "icons/macos/sequoia/full.png",
       width: 18,
       height: 18,
     },
     {
-=======
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
       selector: ".node--id58 .xfa-nit-node-icon-small .fa-apple",
       src: "icons/macos/sonoma/full.png",
       width: 18,
@@ -64,7 +49,6 @@ document.addEventListener("DOMContentLoaded", async function (event) {
       height: 18,
     },
     {
-<<<<<<< HEAD
       selector: ".node--id292 .xfa-nit-node-icon-small .fa-apple",
       src: "icons/macos/monterey/full.png",
       width: 18,
@@ -77,8 +61,6 @@ document.addEventListener("DOMContentLoaded", async function (event) {
       height: 18,
     },
     {
-=======
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
       selector: ".node--id59 .xfa-nit-node-icon-small .fa-spinner",
       src: "icons/macos/opencore/full.png",
       width: 18,
@@ -91,7 +73,6 @@ document.addEventListener("DOMContentLoaded", async function (event) {
       height: 34,
     },
     {
-<<<<<<< HEAD
       selector: ".node--id305 .xfa-nit-node-icon .fa-apple",
       src: "icons/macos/sequoia/full.png",
       width: 34,
@@ -128,8 +109,6 @@ document.addEventListener("DOMContentLoaded", async function (event) {
       height: 34,
     },
     {
-=======
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
       selector: ".node--id61 .xfa-nit-node-icon .fa-linux",
       src: "icons/linux/linux-cat/full.png",
       width: 34,
@@ -213,7 +192,6 @@ document.addEventListener("DOMContentLoaded", async function (event) {
       width: 34,
       height: 34,
     },
-<<<<<<< HEAD
     {
       selector: ".node--id191 .xfa-nit-node-icon .fa-linux",
       src: "icons/linux/debian/full.png",
@@ -286,8 +264,6 @@ document.addEventListener("DOMContentLoaded", async function (event) {
       width: 34,
       height: 34,
     },
-=======
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
   ];
   const result = await chrome.storage.local.get("changeIcons");
   const changeIcons = result["changeIcons"];
