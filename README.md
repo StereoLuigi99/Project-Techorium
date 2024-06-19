@@ -28,9 +28,6 @@ Bu GIF fotoğrafları kullanıcı tarafında bir değişiklik olup sunucuyu kast
 
 ## Resimler/Ekran Görüntüleri
 
-![image](https://github.com/StereoLuigi99/Project-Techorium/assets/166461481/d1747c2e-4697-4323-b64b-94ff3f83662d)
-![image](https://github.com/StereoLuigi99/Project-Techorium/assets/166461481/4bc33c60-5996-443f-b94a-212fbcd1ef66)
-
 ## Yükleme Aşamaları
 ### Chromium (Chrome, Edge, Opera, Opera GX vb.)
 - ZIP dosyalarını klasöre çıkartın.
