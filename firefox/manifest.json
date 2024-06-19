@@ -10,12 +10,8 @@
     "64": "techorium-icons/icon64.png",
     "128": "techorium-icons/icon128.png"
   },
-  "permissions": [
-    "declarativeNetRequest", "storage"
-  ],
-  "host_permissions": [
-    "https://techolay.net/*", "https://www.techolay.net/*"
-  ],
+  "permissions": ["declarativeNetRequest", "storage"],
+  "host_permissions": ["https://techolay.net/*", "https://www.techolay.net/*"],
   "declarative_net_request": {
     "rule_resources": [
       {
@@ -27,12 +23,8 @@
   },
   "web_accessible_resources": [
     {
-      "resources": [
-        "/*"
-      ],
-      "matches": [
-        "https://techolay.net/*", "https://www.techolay.net/*"
-      ]
+      "resources": ["/*"],
+      "matches": ["https://techolay.net/*", "https://www.techolay.net/*"]
     }
   ],
   "browser_specific_settings": {
@@ -42,22 +34,13 @@
     }
   },
   "action": {
-      "default_popup" : "popup.html"
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
-      "js": [
-        "/js/scriptOS.js",
-        "/js/otherThings.js"
-      ],
-      "matches": [
-        "https://techolay.net/*", "https://www.techolay.net/*"
-      ],
-      "css": [
-        "/css/hideOS-fa.css",
-        "/css/osBrowser.css",
-        "/css/otherThings.css"
-      ],
+      "js": ["/js/scriptOS.js", "/js/otherThings.js"],
+      "matches": ["https://techolay.net/*", "https://www.techolay.net/*"],
+      "css": ["/css/osBrowser.css", "/css/otherThings.css"],
       "run_at": "document_start"
     }
   ]
