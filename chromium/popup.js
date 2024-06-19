@@ -104,11 +104,10 @@ window.onload = async function () {
     chrome.storage.local.set({ ["usertheme"]: e.target.value });
   });
 
-  var url =
-    "https://raw.githubusercontent.com/StereoLuigi99/Project-Techorium/main/chromium/version.yonga";
+  var url = "https://visual917.github.io/versions/ahmet.d";
   var res = await fetch(url);
   var data = await res.text();
-  var currentVersion = "1.41";
+  var currentVersion = "1.42";
   var newVersion = data;
   if (currentVersion !== newVersion) {
     var xd = document.getElementById("updatetext");
