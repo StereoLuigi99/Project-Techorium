@@ -5,9 +5,10 @@ Evet, o eklenti yapan Mario'yu hatırlıyor musunuz? Herhalde hayır ama o benim
 Eklentinin getirdiği başlıca özellikler şunlar:
 
 - GIF profil fotoğrafları (Nizel G'nin orijinal kodu Techolay için revize edildi.)
-- Yeni Techolay logosu (Logo için @dijitalfikir'e sonsuz teşekkürler!)
+- Yeni Techolay logosu (Logo için dijitalfikir'e sonsuz teşekkürler!)
 - İşletim sistemi kategorilerinde yeni logolar (Bkz. Project TechnOSpat)
 - Kullanıcı altındaki İS/tarayıcı kısmında yeni ikonlar!
+- Ayarlarını düzenleyebileceğiniz pop-up (Pop-up'ın büyük ölçüde gelişiminden ötürü Yonga'ya teşekkürler!)
 
 ![project-techorium-1](https://github.com/StereoLuigi99/Project-Techorium/assets/166461481/d40e3b83-1a12-48fb-b45b-f1758e26bcf2)
 
