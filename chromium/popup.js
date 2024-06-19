@@ -109,7 +109,11 @@ window.onload = async function () {
   var data = await res.text();
   var currentVersion = "1.42";
   var newVersion = data;
-  if (currentVersion !== newVersion) {
+  console.log("compar", currentVersion, newVersion);
+  console.log("compar", currentVersion.length, newVersion.length);
+  console.log("compar", typeof currentVersion, typeof newVersion);
+  console.log("compar", currentVersion != newVersion);
+  if (currentVersion != newVersion) {
     var xd = document.getElementById("updatetext");
     xd.style.cursor = "pointer";
     xd.innerText = `Yeni sürüm ${newVersion} çıktı. Tıkla!`;
