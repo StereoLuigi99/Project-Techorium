@@ -3,19 +3,15 @@
   "name": "Project Techorium",
   "description": "Stereo.Luigi99 tarafından yapıldı. Yine... Eklentide kullanılan Techolay logosu dijitalfikir'e aittir. Ne yalan söyleyeyim, logo cidden çok güzel. Yapana sonsuz teşekkürler. Tek olay, Techolay!",
   "homepage_url": "https://techolay.net/sosyal/konu/techolay-icin-gif-ve-daha-fazlasi-project-techorium.2661/",
-  "version": "1.3",
+  "version": "1.42",
   "icons": {
     "16": "techorium-icons/icon16.png",
     "32": "techorium-icons/icon32.png",
     "64": "techorium-icons/icon64.png",
     "128": "techorium-icons/icon128.png"
   },
-  "permissions": [
-    "declarativeNetRequest", "storage"
-  ],
-  "host_permissions": [
-    "https://techolay.net/*", "https://www.techolay.net/*"
-  ],
+  "permissions": ["declarativeNetRequest", "storage"],
+  "host_permissions": ["https://techolay.net/*", "https://www.techolay.net/*"],
   "declarative_net_request": {
     "rule_resources": [
       {
@@ -25,39 +21,35 @@
       }
     ]
   },
+<<<<<<< HEAD
+=======
   "web_accessible_resources": [
     {
-      "resources": [
-        "/*"
-      ],
-      "matches": [
-        "https://techolay.net/*", "https://www.techolay.net/*"
-      ]
+      "resources": ["/*"],
+      "matches": ["https://techolay.net/*", "https://www.techolay.net/*"]
     }
   ],
+>>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
   "browser_specific_settings": {
     "gecko": {
       "id": "stereo.luigi99-191@techolay.net",
       "strict_min_version": "113.0"
     }
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["/*"],
+      "matches": ["https://techolay.net/*", "https://www.techolay.net/*"]
+    }
+  ],
   "action": {
-      "default_popup" : "popup.html"
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
-      "js": [
-        "/js/scriptOS.js",
-        "/js/otherThings.js"
-      ],
-      "matches": [
-        "https://techolay.net/*", "https://www.techolay.net/*"
-      ],
-      "css": [
-        "/css/hideOS-fa.css",
-        "/css/osBrowser.css",
-        "/css/otherThings.css"
-      ],
+      "js": ["/js/scriptOS.js", "/js/otherThings.js"],
+      "matches": ["https://techolay.net/*", "https://www.techolay.net/*"],
+      "css": ["/css/osBrowser.css", "/css/otherThings.css"],
       "run_at": "document_start"
     }
   ]
