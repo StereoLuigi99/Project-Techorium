@@ -108,7 +108,7 @@ window.onload = async function () {
   var res = await fetch(url);
   var data = await res.text();
   var currentVersion = "1.42";
-  var newVersion = data;
+  var newVersion = data.trim();
   console.log("compar", currentVersion, newVersion);
   console.log("compar", currentVersion.length, newVersion.length);
   console.log("compar", typeof currentVersion, typeof newVersion);
