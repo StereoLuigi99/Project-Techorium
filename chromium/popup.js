@@ -103,4 +103,25 @@ window.onload = async function () {
   userThemeBox?.addEventListener("change", function (e) {
     chrome.storage.local.set({ ["usertheme"]: e.target.value });
   });
+
+  var url =
+    "https://raw.githubusercontent.com/StereoLuigi99/Project-Techorium/main/chromium/version.yonga";
+  var res = await fetch(url);
+  var data = await res.text();
+  var currentVersion = "1.41";
+  var newVersion = data;
+  if (currentVersion !== newVersion) {
+    var xd = document.getElementById("updatetext");
+    xd.style.cursor = "pointer";
+    xd.innerText = `Yeni sürüm ${newVersion} çıktı. Tıkla!`;
+    xd.addEventListener("click", function () {
+      window.open(
+        "https://github.com/StereoLuigi99/Project-Techorium/releases/latest",
+      );
+    });
+  } else {
+    var stru = `Sürüm: ${currentVersion} | Güncelsiniz.`;
+    var xd = document.getElementById("updatetext");
+    xd.innerText = stru;
+  }
 };
