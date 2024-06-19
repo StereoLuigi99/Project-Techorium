@@ -1,66 +1,106 @@
-window.onload = function() {
-    var body = document.body;
+window.onload = async function () {
+  var userThemeBox = document.getElementById("usertheme");
+  var savedTheme = await chrome.storage.local.get(["usertheme"]);
+  if (savedTheme !== null) {
+    userThemeBox.value = savedTheme["usertheme"];
+  }
+  var body = document.body;
+  var settingsContainer = document.getElementById("settingsContainer");
+  console.log("Hi");
+  var settings = [
+    {
+      id: "buttonTopColor",
+      imgSrcOn: "techorium-popup/toggle-on.png",
+      imgSrcOff: "techorium-popup/toggle-off.png",
+      storageKey: "buttonTopColorStatus",
+      label: "Logo bölümündeki mavi renk teması",
+      onEnable: function () {
+        console.log("Özellik açıldı!");
+      },
+      onDisable: function () {
+        console.log("Özellik kapatıldı!");
+      },
+    },
+    {
+      id: "buttonTopColor",
+      imgSrcOn: "techorium-popup/toggle-on.png",
+      imgSrcOff: "techorium-popup/toggle-off.png",
+      storageKey: "osBrowserStatus",
+      label: "Herkesin OS ve Tarayıcı Bilgisini gizle",
+      onEnable: function () {
+        console.log("Özellik açıldı!");
+      },
+      onDisable: function () {
+        console.log("Özellik kapatıldı!");
+      },
+    },
+    {
+      id: "buttonTopColor",
+      imgSrcOn: "techorium-popup/toggle-on.png",
+      imgSrcOff: "techorium-popup/toggle-off.png",
+      storageKey: "signatureStatus",
+      label: "Herkesin imzasını gizle",
+      onEnable: function () {
+        console.log("Özellik açıldı!");
+      },
+      onDisable: function () {
+        console.log("Özellik kapatıldı!");
+      },
+    },
+    {
+      id: "buttonTopColor",
+      imgSrcOn: "techorium-popup/toggle-on.png",
+      imgSrcOff: "techorium-popup/toggle-off.png",
+      storageKey: "changeIcons",
+      label: "Eklentinin bölüm simgelerini kullan",
+      onEnable: function () {
+        console.log("Özellik açıldı!");
+      },
+      onDisable: function () {
+        console.log("Özellik kapatıldı!");
+      },
+    },
+    // daha fazla ayar gelebilir. buradan sonra otherThings.js'e eklenecek.
+  ];
 
-    var buttonTopColor = document.getElementById("buttonTopColor");
-    var buttonTopColorIMG = buttonTopColor.getElementsByTagName("img")[0];
-
-    chrome.storage.local.get(["buttonTopColorStatus"]).then((local) => {
-        if (local.buttonTopColorStatus == "1") {
-            buttonTopColorIMG.setAttribute("src", "techorium-popup/toggle-on.png");
-        }
-        if (local.buttonTopColorStatus == "0") {
-            buttonTopColorIMG.setAttribute("src", "techorium-popup/toggle-off.png");
-        }
+  settings.forEach(function (setting) {
+    var settingContainer = document.createElement("div");
+    settingContainer.className = "settingContainer";
+    var button = document.createElement("button");
+    button.id = setting.id;
+    button.className = "settingButton";
+    var buttonImg = document.createElement("img");
+    buttonImg.width = 20;
+    buttonImg.height = 20;
+    chrome.storage.local.get([setting.storageKey]).then(function (local) {
+      buttonImg.src =
+        local[setting.storageKey] == "1" ? setting.imgSrcOn : setting.imgSrcOff;
     });
-
-    buttonTopColor.addEventListener('click', function() {
-        var buttonTopColorIMGsrc = buttonTopColorIMG.getAttribute("src");
-        if (buttonTopColorIMGsrc == "techorium-popup/toggle-on.png") {
-            buttonTopColorIMG.setAttribute("src", "techorium-popup/toggle-off.png");
-            chrome.storage.local.set({ "buttonTopColorStatus" : "0" }).then(() => {
-                console.log("Özellik kapatıldı!");
-            });
-        }
-        if (buttonTopColorIMGsrc == "techorium-popup/toggle-off.png") {
-            buttonTopColorIMG.setAttribute("src", "techorium-popup/toggle-on.png");
-            chrome.storage.local.set({ "buttonTopColorStatus" : "1" }).then(() => {
-                console.log("Özellik açıldı!");
-            });
-        }
+    button.appendChild(buttonImg);
+    settingContainer.appendChild(button);
+    var label = document.createElement("p");
+    label.className = "descriptionText";
+    label.textContent = setting.label;
+    settingContainer.appendChild(label);
+    settingsContainer.appendChild(settingContainer);
+    button.addEventListener("click", function () {
+      chrome.storage.local.get([setting.storageKey]).then(function (local) {
+        var value = local[setting.storageKey] == "1" ? "0" : "1";
+        chrome.storage.local
+          .set({ [setting.storageKey]: value })
+          .then(function () {
+            buttonImg.src = value == "1" ? setting.imgSrcOn : setting.imgSrcOff;
+            if (value == "1") {
+              setting.onEnable();
+            } else {
+              setting.onDisable();
+            }
+          });
+      });
     });
+  });
 
-    var darkModeButton = document.getElementById("darkModeButton");
-    var darkModeButtonIMG = darkModeButton.getElementsByTagName("img")[0];
-    body.classList.add("lightMode");
-
-    chrome.storage.local.get(["darkModeStatus"]).then((local) => {
-        if (local.darkModeStatus == "1") {
-            darkModeButtonIMG.setAttribute("src", "techorium-popup/light-moon.png");
-            body.classList.remove("lightMode");
-            body.classList.add("darkMode");
-        }
-        if (local.darkModeStatus == "0") {
-            darkModeButtonIMG.setAttribute("src", "techorium-popup/dark-moon.png");
-        }
-    });
-
-    darkModeButton.addEventListener('click', function() {
-        var darkModeButtonIMGsrc = darkModeButtonIMG.getAttribute("src");
-        if (darkModeButtonIMGsrc == "techorium-popup/dark-moon.png") {
-            darkModeButtonIMG.setAttribute("src", "techorium-popup/light-moon.png");
-            body.classList.remove("lightMode");
-            body.classList.add("darkMode");
-            chrome.storage.local.set({ "darkModeStatus" : "1" }).then(() => {
-                console.log("Karanlık mod açıldı!");
-            });
-        }
-        if (darkModeButtonIMGsrc == "techorium-popup/light-moon.png") {
-            darkModeButtonIMG.setAttribute("src", "techorium-popup/dark-moon.png");
-            body.classList.remove("darkMode");
-            body.classList.add("lightMode");
-            chrome.storage.local.set({ "darkModeStatus" : "0" }).then(() => {
-                console.log("Karanlık mod kapatıldı!");
-            });
-        }
-    });
+  userThemeBox?.addEventListener("change", function (e) {
+    chrome.storage.local.set({ ["usertheme"]: e.target.value });
+  });
 };
