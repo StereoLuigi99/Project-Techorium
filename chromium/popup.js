@@ -26,11 +26,7 @@ window.onload = async function () {
       imgSrcOn: "techorium-popup/toggle-on.png",
       imgSrcOff: "techorium-popup/toggle-off.png",
       storageKey: "osBrowserStatus",
-<<<<<<< HEAD
       label: "Herkesin OS/tarayıcı bilgisini gizle",
-=======
-      label: "Herkesin OS ve Tarayıcı Bilgisini gizle",
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
       onEnable: function () {
         console.log("Özellik açıldı!");
       },
@@ -56,11 +52,7 @@ window.onload = async function () {
       imgSrcOn: "techorium-popup/toggle-on.png",
       imgSrcOff: "techorium-popup/toggle-off.png",
       storageKey: "changeIcons",
-<<<<<<< HEAD
       label: "İşletim sistemi kategori ikonlarını iyileştir",
-=======
-      label: "Eklentinin bölüm simgelerini kullan",
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
       onEnable: function () {
         console.log("Özellik açıldı!");
       },
@@ -78,11 +70,7 @@ window.onload = async function () {
     button.id = setting.id;
     button.className = "settingButton";
     var buttonImg = document.createElement("img");
-<<<<<<< HEAD
     buttonImg.width = 30;
-=======
-    buttonImg.width = 20;
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
     buttonImg.height = 20;
     chrome.storage.local.get([setting.storageKey]).then(function (local) {
       buttonImg.src =
@@ -116,17 +104,10 @@ window.onload = async function () {
     chrome.storage.local.set({ ["usertheme"]: e.target.value });
   });
 
-<<<<<<< HEAD
   var url = "https://visual917.github.io/versions/ahmet.txt"; // Yes, that's my name.
   var res = await fetch(url);
   var data = await res.text();
   var currentVersion = "1.45";
-=======
-  var url = "https://visual917.github.io/versions/ahmet.txt";
-  var res = await fetch(url);
-  var data = await res.text();
-  var currentVersion = "1.42";
->>>>>>> d4adedb33ebdcaee0f114b9c21abc9e54ff7516f
   var newVersion = data.trim();
   console.log("compar", currentVersion, newVersion);
   console.log("compar", currentVersion.length, newVersion.length);
