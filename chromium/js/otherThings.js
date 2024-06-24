@@ -103,4 +103,76 @@ window.onload = function () {
       }
     });
   });
+  function insertEmoji(shortcut, url) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    const imgElement = document.createElement("img");
+    imgElement.src = url;
+    imgElement.style.width = "24px";
+    imgElement.style.height = "24px";
+    range.insertNode(imgElement);
+  }
+  function insertEmoji(shortcut, url) {
+    const postCreator = document.querySelector(
+      ".fr-element.fr-view.fr-element-scroll-visible",
+    );
+    if (postCreator) {
+      const imgElement = document.createElement("img");
+      imgElement.src = url;
+      imgElement.style.width = "24px";
+      imgElement.style.height = "24px";
+      const editor = postCreator.closest(".fr-element");
+      editor.focus();
+      const selection = window.getSelection();
+      const range = selection.getRangeAt(0);
+      range.insertNode(imgElement);
+    }
+  }
+
+  async function addEmojiPickerAndEmojis() {
+    const response = await fetch(chrome.runtime.getURL("emoji/chooser.html"));
+    const data = await response.text();
+    // "#top > div.p-body > div > div.p-body-main.p-body-main--withSidebar > div.p-body-content > div > form > div > div > div > div > div.message-cell.message-cell--user",
+    const targetSelectors = ["h4.block-textHeader"];
+    var res = await fetch("https://visual917.github.io/versions/emojis.json");
+    var json = await res.text();
+    const emojis = JSON.parse(json);
+    targetSelectors.forEach(selector => {
+      const targetElements = document.querySelectorAll(selector);
+      targetElements.forEach(targetElement => {
+        if (targetElement && !targetElement.hasAttribute("data-emoji-added")) {
+          const div = document.createElement("div");
+          div.innerHTML = data;
+
+          targetElement.insertBefore(div, targetElement.firstChild);
+
+          targetElement.setAttribute("data-emoji-added", "true");
+
+          const emojiContainer = div.querySelector(".emoji-container");
+          if (emojiContainer) {
+            emojis.forEach(emoji => {
+              const emojiElement = document.createElement("img");
+              emojiElement.src = emoji.url;
+              emojiElement.alt = emoji.name;
+              emojiElement.title = emoji.shortcut;
+              emojiElement.style.width = "24px";
+              emojiElement.style.height = "24px";
+              emojiElement.style.cursor = "pointer";
+              emojiElement.onclick = () =>
+                insertEmoji(emoji.shortcut, emoji.url);
+              emojiContainer.appendChild(emojiElement);
+            });
+          } else {
+            console.error("Emoji container not found in the data");
+          }
+        }
+      });
+    });
+  }
+
+  const observer = new MutationObserver(addEmojiPickerAndEmojis);
+  observer.observe(document.body, { childList: true, subtree: true });
+  addEmojiPickerAndEmojis();
 };

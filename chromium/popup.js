@@ -107,7 +107,7 @@ window.onload = async function () {
   var url = "https://visual917.github.io/versions/ahmet.txt"; // Yes, that's my name.
   var res = await fetch(url);
   var data = await res.text();
-  var currentVersion = "1.45";
+  var currentVersion = "1.48";
   var newVersion = data.trim();
   console.log("compar", currentVersion, newVersion);
   console.log("compar", currentVersion.length, newVersion.length);
@@ -127,4 +127,6 @@ window.onload = async function () {
     var xd = document.getElementById("updatetext");
     xd.innerText = stru;
   }
+
+  // content.js
 };
