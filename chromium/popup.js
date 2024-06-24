@@ -26,7 +26,7 @@ window.onload = async function () {
       imgSrcOn: "techorium-popup/toggle-on.png",
       imgSrcOff: "techorium-popup/toggle-off.png",
       storageKey: "osBrowserStatus",
-      label: "Herkesin OS ve Tarayıcı Bilgisini gizle",
+      label: "Herkesin OS/tarayıcı bilgisini gizle",
       onEnable: function () {
         console.log("Özellik açıldı!");
       },
@@ -52,7 +52,7 @@ window.onload = async function () {
       imgSrcOn: "techorium-popup/toggle-on.png",
       imgSrcOff: "techorium-popup/toggle-off.png",
       storageKey: "changeIcons",
-      label: "Eklentinin bölüm simgelerini kullan",
+      label: "İşletim sistemi kategori ikonlarını iyileştir",
       onEnable: function () {
         console.log("Özellik açıldı!");
       },
@@ -70,7 +70,7 @@ window.onload = async function () {
     button.id = setting.id;
     button.className = "settingButton";
     var buttonImg = document.createElement("img");
-    buttonImg.width = 20;
+    buttonImg.width = 30;
     buttonImg.height = 20;
     chrome.storage.local.get([setting.storageKey]).then(function (local) {
       buttonImg.src =
@@ -104,10 +104,10 @@ window.onload = async function () {
     chrome.storage.local.set({ ["usertheme"]: e.target.value });
   });
 
-  var url = "https://visual917.github.io/versions/ahmet.txt";
+  var url = "https://visual917.github.io/versions/ahmet.txt"; // Yes, that's my name.
   var res = await fetch(url);
   var data = await res.text();
-  var currentVersion = "1.42";
+  var currentVersion = "1.48";
   var newVersion = data.trim();
   console.log("compar", currentVersion, newVersion);
   console.log("compar", currentVersion.length, newVersion.length);
@@ -127,4 +127,6 @@ window.onload = async function () {
     var xd = document.getElementById("updatetext");
     xd.innerText = stru;
   }
+
+  // content.js
 };
