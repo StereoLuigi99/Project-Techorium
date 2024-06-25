@@ -104,17 +104,6 @@ window.onload = function () {
     });
   });
   function insertEmoji(shortcut, url) {
-    const selection = window.getSelection();
-    if (!selection.rangeCount) return;
-
-    const range = selection.getRangeAt(0);
-    const imgElement = document.createElement("img");
-    imgElement.src = url;
-    imgElement.style.width = "24px";
-    imgElement.style.height = "24px";
-    range.insertNode(imgElement);
-  }
-  function insertEmoji(shortcut, url) {
     const postCreator = document.querySelector(
       ".fr-element.fr-view.fr-element-scroll-visible",
     );
@@ -123,11 +112,19 @@ window.onload = function () {
       imgElement.src = url;
       imgElement.style.width = "24px";
       imgElement.style.height = "24px";
+
       const editor = postCreator.closest(".fr-element");
       editor.focus();
+
       const selection = window.getSelection();
       const range = selection.getRangeAt(0);
       range.insertNode(imgElement);
+
+      // Move the cursor to the right of the inserted emoji
+      range.setStartAfter(imgElement);
+      range.setEndAfter(imgElement);
+      selection.removeAllRanges();
+      selection.addRange(range);
     }
   }
 
@@ -172,14 +169,15 @@ window.onload = function () {
     });
     var removals = [
       "div.p-body-sidebar > div:nth-child(6) > div > div.block-body > div:nth-child(1) > h4 > div > div > div",
+      "div.p-body-sidebar > div:nth-child(5) > div > div.block-body > div:nth-child(1) > h4 > div > div > div",
       "div.p-body-sidebar > div:nth-child(6) > div > div.block-body > div:nth-child(2) > h4 > div > div > div",
       "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(2) > h4 > div > div > div",
+      "div.p-body-sidebar > div:nth-child(5) > div > div.block-body > div:nth-child(2) > h4 > div > div > div",
       "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(3) > h4 > div > div > div",
       "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(5) > h4 > div > div > div",
       "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(4) > h4 > div > div > div",
       "div.message-cell.message-cell--main > div > div > div > section > h4 > div > div > div",
     ];
-
     removals.forEach(selector => {
       var element = document.querySelector(selector);
       if (element) {
