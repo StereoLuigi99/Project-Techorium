@@ -177,6 +177,7 @@ window.onload = function () {
       "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(3) > h4 > div > div > div",
       "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(5) > h4 > div > div > div",
       "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(4) > h4 > div > div > div",
+      "div.message-cell.message-cell--main > div > div > div > section > h4 > div > div > div",
     ];
 
     removals.forEach(selector => {
