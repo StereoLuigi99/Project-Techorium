@@ -170,6 +170,21 @@ window.onload = function () {
         }
       });
     });
+    var removals = [
+      "div.p-body-sidebar > div:nth-child(6) > div > div.block-body > div:nth-child(1) > h4 > div > div > div",
+      "div.p-body-sidebar > div:nth-child(6) > div > div.block-body > div:nth-child(2) > h4 > div > div > div",
+      "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(2) > h4 > div > div > div",
+      "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(3) > h4 > div > div > div",
+      "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(5) > h4 > div > div > div",
+      "div.p-body-content > div > ul > li.is-active > div > div > div > div:nth-child(4) > h4 > div > div > div",
+    ];
+
+    removals.forEach(selector => {
+      var element = document.querySelector(selector);
+      if (element) {
+        element.remove();
+      }
+    });
   }
 
   const observer = new MutationObserver(addEmojiPickerAndEmojis);
