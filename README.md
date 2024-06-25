@@ -5,9 +5,10 @@ Evet, o eklenti yapan Mario'yu hatırlıyor musunuz? Herhalde hayır ama o benim
 Eklentinin getirdiği başlıca özellikler şunlar:
 
 - GIF profil fotoğrafları (Nizel G'nin orijinal kodu Techolay için revize edildi.)
-- Yeni Techolay logosu (Logo için @dijitalfikir'e sonsuz teşekkürler!)
+- Yeni Techolay logosu (Logo için dijitalfikir'e sonsuz teşekkürler!)
 - İşletim sistemi kategorilerinde yeni logolar (Bkz. Project TechnOSpat)
 - Kullanıcı altındaki İS/tarayıcı kısmında yeni ikonlar!
+- Ayarlarını düzenleyebileceğiniz pop-up (Pop-up'ın büyük ölçüde gelişiminden ötürü Yonga'ya teşekkürler!)
 
 ![project-techorium-1](https://github.com/StereoLuigi99/Project-Techorium/assets/166461481/d40e3b83-1a12-48fb-b45b-f1758e26bcf2)
 
@@ -26,9 +27,6 @@ Eğer 113.0 ve üstüyse aşağıdaki adımları takip edin:
 Bu GIF fotoğrafları kullanıcı tarafında bir değişiklik olup sunucuyu kastırmaz, o konuda içiniz rahat olsun.
 
 ## Resimler/Ekran Görüntüleri
-
-![image](https://github.com/StereoLuigi99/Project-Techorium/assets/166461481/d1747c2e-4697-4323-b64b-94ff3f83662d)
-![image](https://github.com/StereoLuigi99/Project-Techorium/assets/166461481/4bc33c60-5996-443f-b94a-212fbcd1ef66)
 
 ## Yükleme Aşamaları
 ### Chromium (Chrome, Edge, Opera, Opera GX vb.)

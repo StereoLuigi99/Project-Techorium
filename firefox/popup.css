@@ -1,84 +1,93 @@
 @font-face {
-    font-family: 'SFRoundedBold';
-    src: url('sf-font/SFRounded-Bold.eot');
-    src: url('sf-font/SFRounded-Bold.eot?#iefix') format('embedded-opentype'),
-        url('sf-font/SFRounded-Bold.woff2') format('woff2'),
-        url('sf-font/SFRounded-Bold.woff') format('woff'),
-        url('sf-font/SFRounded-Bold.ttf') format('truetype'),
-        url('sf-font/SFRounded-Bold.svg#SFRounded-Bold') format('svg');
+    font-family: "SFRoundedBold";
+    src: url("sf-font/SFRounded-Bold.eot");
+    src: url("sf-font/SFRounded-Bold.eot?#iefix") format("embedded-opentype"),
+      url("sf-font/SFRounded-Bold.woff2") format("woff2"),
+      url("sf-font/SFRounded-Bold.woff") format("woff"),
+      url("sf-font/SFRounded-Bold.ttf") format("truetype"),
+      url("sf-font/SFRounded-Bold.svg#SFRounded-Bold") format("svg");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
-}
-
-@font-face {
-    font-family: 'SFRoundedLight';
-    src: url('sf-font/SFRounded-Light.eot');
-    src: url('sf-font/SFRounded-Light.eot?#iefix') format('embedded-opentype'),
-        url('sf-font/SFRounded-Light.woff2') format('woff2'),
-        url('sf-font/SFRounded-Light.woff') format('woff'),
-        url('sf-font/SFRounded-Light.ttf') format('truetype'),
-        url('sf-font/SFRounded-Light.svg#SFRounded-Light') format('svg');
+  }
+  
+  @font-face {
+    font-family: "SFRoundedLight";
+    src: url("sf-font/SFRounded-Light.eot");
+    src: url("sf-font/SFRounded-Light.eot?#iefix") format("embedded-opentype"),
+      url("sf-font/SFRounded-Light.woff2") format("woff2"),
+      url("sf-font/SFRounded-Light.woff") format("woff"),
+      url("sf-font/SFRounded-Light.ttf") format("truetype"),
+      url("sf-font/SFRounded-Light.svg#SFRounded-Light") format("svg");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
-}
-
-body {
+  }
+  
+  html {
     width: 525px;
     height: 350px;
-}
-
-.settingButton {
-    border: none;
-    cursor: pointer;
-    appearance: none;
-    background-color: inherit;
-    position: relative;
-    right: -13px;
-    top: 5px;
-}
-
-#darkModeButton {
-    border: none;
-    cursor: pointer;
-    appearance: none;
-    background-color: inherit;
-    position: relative;
-    right: -380px;
-    bottom: -14px;
-}
-
-.darkMode {
-    background-color: black;
-    color: white;
-}
-
-.lightMode {
-    background-color: white;
-    color: black;
-}
-
-*{
+  }
+  
+  body {
     margin: 0;
     padding: 0;
-}
-
-#settingsTitle {
-    position: relative;
-    display: inline;
-    bottom: -15px;
-    right: -15px;
-    font-size: xx-large;
-    font-family: 'SFRoundedBold';
-}
-
-.descriptionText {
-    position: relative;
-    right: -23px;
+  }
+  
+  #settingsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .settingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+  }
+  
+  .settingButton {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  
+  .descriptionText {
     font-size: 15px;
-    display: inline;
-    font-family: 'SFRoundedLight';
-    line-height: 2;
-}
-
+    font-family: "SFRoundedLight";
+    line-height: 1;
+    margin: 0;
+  }
+  
+  #darkModeButton {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+  }
+  
+  .darkMode {
+    background-color: black;
+    color: white;
+  }
+  
+  .lightMode {
+    background-color: white;
+    color: black;
+  }
+  
+  #settingsTitle {
+    font-size: xx-large;
+    font-family: "SFRoundedBold";
+    margin-bottom: 20px;
+  }
+  
