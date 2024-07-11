@@ -207,7 +207,7 @@ window.onload = function () {
     });
   }
 
-  const observer = new MutationObserver(addEmojiPickerAndEmojis);
-  observer.observe(document.body, { childList: true, subtree: true });
-  addEmojiPickerAndEmojis();
+  //const observer = new MutationObserver(addEmojiPickerAndEmojis);
+  //observer.observe(document.body, { childList: true, subtree: true });
+  //addEmojiPickerAndEmojis();
 };
