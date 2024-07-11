@@ -83,6 +83,27 @@ window.onload = function () {
         },
       ],
     },
+    {
+      key: "changeTLogo",
+      styles: [
+        {
+          css: `
+.p-header-logo.p-header-logo--image > a[href="/sosyal/"] > img {
+    content: url(${chrome.runtime.getURL("techolay-dijitalfikir.png")}) !important;
+    width: 275px !important;
+    height: 59px !important;
+    aspect-ratio: auto 275 / 59 !important;
+}
+          
+.p-nav-smallLogo > a[href="/sosyal/"] > img {
+    content: url(${chrome.runtime.getURL("techolay-dijitalfikir.png")}) !important;
+    width: 280px !important;
+    height: 20px !important;
+}
+`,
+        },
+      ],
+    },
     // daha fazla ayar eklenebilir, ama önce popup.js'e eklenmeli.
   ];
 

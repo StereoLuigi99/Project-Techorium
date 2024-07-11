@@ -60,6 +60,19 @@ window.onload = async function () {
         console.log("Özellik kapatıldı!");
       },
     },
+    {
+      id: "buttonTopColor",
+      imgSrcOn: "techorium-popup/toggle-on.png",
+      imgSrcOff: "techorium-popup/toggle-off.png",
+      storageKey: "changeTLogo",
+      label: "Özel Techolay logosunu kullan",
+      onEnable: function () {
+        console.log("Özellik açıldı!");
+      },
+      onDisable: function () {
+        console.log("Özellik kapatıldı!");
+      },
+    }
     // daha fazla ayar gelebilir. buradan sonra otherThings.js'e eklenecek.
   ];
 
