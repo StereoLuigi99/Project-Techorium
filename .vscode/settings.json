@@ -1,0 +1,33 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "files.insertFinalNewline": true,
+    "files.associations": {
+        "manifest.json": "jsonc",
+    },
+    "html.format.wrapLineLength": 0,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+    "javascript.format.semicolons": "insert",
+    "js/ts.implicitProjectConfig.target": "ESNext",
+    "css.format.newlineBetweenRules": false,
+    "css.format.newlineBetweenSelectors": true,
+    "css.format.spaceAroundSelectorSeparator": true,
+    "scss.format.newlineBetweenRules": false,
+    "scss.format.newlineBetweenSelectors": true,
+    "scss.format.spaceAroundSelectorSeparator": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "extensionName": ".min.css",
+            "format": "compressed",
+            "savePathReplacementPairs": {
+                "/scss/": "/css/",
+            },
+        },
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.showOutputWindowOn": "Warning",
+    "liveSassCompile.settings.useNewCompiler": true,
+}

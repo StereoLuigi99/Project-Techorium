@@ -1,0 +1,100 @@
+// do not format this file
+
+// id os(icon name) isSmall
+$category-icons: (
+    52  win11,                  // windows 11
+    53  win10,                  // windows 10
+    54  win8,                   // windows 8.1
+    55  win7,                   // windows 7
+    56  win-other,              // other windows
+    57  macos-cat,              // macos
+    61  linux-cat,              // gnu/linux
+    62  amogos,                 // other os
+    59  opencore        true,   // opencore
+    305 sequoia         true,   // 15.0 sequoia
+    58  sonoma          true,   // 14.0 sonoma
+    60  ventura         true,   // 13.0 ventura
+    292 monterey        true,   // 12.0 monterey
+    293 big-sur         true,   // 11.0 big sur
+    191 debian          true,   // debian
+    192 pardus          true,   // pardus
+    193 kali-linux      true,   // kali
+    194 ubuntu          true,   // ubuntu
+    195 linux-mint      true,   // linux mint
+    196 pop-os          true,   // pop!_os
+    197 elementary-os   true,   // elementary os
+    198 redhat          true,   // redhat, centos and almalinux
+    199 fedora          true,   // fedora
+    200 arch            true,   // arch linux
+    201 manjaro         true,   // manjaro
+    202 gentoo          true,   // gentoo
+);
+
+@mixin width-height($value) {
+    width: $value !important;
+    height: $value !important;
+}
+
+@mixin background-settings {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+@mixin hide-os-category-icons {
+    $node-ids: ();
+    $node-ids-small: ();
+
+    @each $id, $os, $isSmall in $category-icons {
+        @if not $isSmall {
+            $node-ids: append($node-ids, unquote(".node--id#{$id}"), comma);
+        }
+        @else {
+            $node-ids-small: append($node-ids-small, unquote(".node--id#{$id}"), comma);
+        }
+    }
+
+    :is(#{$node-ids}) .xfa-nit-node-icon > :first-child::before,
+    :is(#{$node-ids-small}) :is(.xfa-nit-node-icon, .xfa-nit-node-icon-small) > :first-child::before {
+        display: none !important;
+    }
+}
+
+@mixin set-os-category-icons {
+    @each $id, $os, $isSmall in $category-icons {
+        $chrome-url: "chrome-extension://__MSG_@@extension_id__/img/catIcons/#{$os}.png";
+        $moz-url: "moz-extension://__MSG_@@extension_id__/img/catIcons/#{$os}.png";
+
+        @if $isSmall {
+            .node--id#{$id} :is(.xfa-nit-node-icon, .xfa-nit-node-icon-small) > :first-child {
+                background-image: url($chrome-url), url($moz-url) !important;
+            }
+        }
+        @else {
+            .node--id#{$id} .xfa-nit-node-icon > :first-child {
+                background-image: url($chrome-url), url($moz-url) !important;
+            }
+        }
+    }
+}
+
+
+html.s_ptci {
+    .xfa-nit-node-icon > :first-child {
+        @include background-settings;
+        @include width-height(100%);
+    }
+
+    .xfa-nit-node-icon-small > :first-child {
+        @include background-settings;
+        @include width-height(18px);
+    }
+
+    .node-body:has(.xfa-nit-node-icon),
+    .xfa-nit-node-icon {
+        height: 100% !important;
+    }
+
+    @include set-os-category-icons;
+    @include hide-os-category-icons;
+}

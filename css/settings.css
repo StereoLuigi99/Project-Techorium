@@ -1,0 +1,121 @@
+/* Heavily inspired by Raymond Hill's uBlock Origin */
+
+:root {
+    color-scheme: light dark;
+    --std-gap: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    touch-action: manipulation;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--std-gap);
+    margin: 0;
+    padding: var(--std-gap);
+    line-height: 1.2;
+}
+
+#requestPermission {
+    display: none;
+    flex-direction: column;
+    gap: var(--std-gap);
+}
+
+#requestPermission > span {
+    font-size: calc(var(--std-gap) * 3);
+}
+
+#requestPermission > button {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--std-gap) / 2);
+    width: fit-content;
+    padding: 0.5em 1em;
+    /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+    font-size: calc(var(--std-gap) * 3 / 2);
+    font-weight: 500;
+    border: none;
+    border-radius: 0.375em;
+}
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--std-gap) * 2 / 3);
+}
+
+.fieldset-header {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+label {
+    display: flex;
+    gap: calc(var(--std-gap) * 2 / 3);
+    align-items: center;
+    width: fit-content;
+}
+
+input {
+    flex: none;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+/* span {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+} */
+
+hr {
+    margin: 0;
+    border-style: solid;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--gray-10);
+    }
+
+    #requestPermission > button {
+        color: var(--gray-05);
+        background-color: var(--blue-30);
+    }
+
+    #requestPermission > button:hover {
+        background-color: var(--blue-30-08);
+    }
+
+    .fieldset-header {
+        color: var(--blue-30);
+    }
+
+    label span {
+        color: var(--gray-95);
+    }
+
+    hr {
+        border-color: var(--gray-25);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    #requestPermission > button {
+        color: var(--gray-95);
+        background-color: var(--blue-60);
+    }
+
+    #requestPermission > button:hover {
+        background-color: var(--blue-50);
+    }
+
+    hr {
+        border-color: var(--gray-50);
+    }
+}
