@@ -1,0 +1,189 @@
+:root {
+    color-scheme: light dark;
+    --std-gap: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    touch-action: manipulation;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--std-gap);
+    height: 100svh;
+    margin: 0;
+    padding: var(--std-gap);
+    line-height: 1.2;
+}
+
+#doubleTapHint {
+    display: none;
+    align-items: center;
+    gap: calc(var(--std-gap) * 2);
+    width: fit-content;
+    padding: calc(var(--std-gap) / 2) var(--std-gap);
+    border-radius: calc(var(--std-gap) / 3);
+    /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+#doubleTapHint > .mobile {
+    display: none;
+}
+
+:root.mobile #doubleTapHint > .mobile {
+    display: block;
+}
+
+:root.mobile #doubleTapHint > .mobile + span  {
+    display: none;
+}
+
+#doubleTapHint > b {
+    text-wrap: nowrap;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#buttons {
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--std-gap);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--std-gap) / 2);
+    padding: 0.5em 1em;
+    /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+    font-size: calc(var(--std-gap) * 4 / 3);
+    font-weight: 500;
+    border: none;
+    border-radius: 0.375em;
+}
+
+button[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+#applyButton path {
+    d: path("M173.7 417.1c-6.1 0-12.3-2.3-17-7l-109.7-109.7c-9.4-9.4-9.4-24.6 0-33.9 9.4-9.4 24.6-9.4 33.9 0l92.7 92.7 257.4-257.3c9.4-9.4 24.6-9.4 33.9 0 9.4 9.4 9.4 24.6 0 33.9l-274.2 274.3c-4.7 4.7-10.8 7-17 7z");
+}
+
+#exportButton path {
+    d: path("M448 472h-384c-13.3 0-24-10.7-24-24v-128c0-13.3 10.7-24 24-24s24 10.7 24 24v104h336v-104c0-13.3 10.7-24 24-24s24 10.7 24 24v128c0 13.3-10.7 24-24 24zM386.1 160.2l-113.1-113.2 0 0c-4.3-4.3-10.3-7-17-7s-12.6 2.7-17 7l0 0-113.1 113.2c-9.4 9.4-9.4 24.6 0 33.9 4.7 4.7 10.8 7 17 7s12.3-2.3 17-7l72.2-72.2v198.1c0 13.3 10.7 24 24 24s24-10.7 24-24v-198.1l72.2 72.2c4.7 4.7 10.8 7 17 7 6.1 0 12.3-2.3 17-7 9.2-9.4 9.2-24.6-.2-33.9z");
+}
+
+#importButton path {
+    d: path("M448 472h-384c-13.3 0-24-10.7-24-24v-128c0-13.3 10.7-24 24-24s24 10.7 24 24v104h336v-104c0-13.3 10.7-24 24-24s24 10.7 24 24v128c0 13.3-10.7 24-24 24zM386.1 189.9c-9.4-9.4-24.6-9.4-33.9 0l-72.2 72.2v-198.1c0-13.3-10.7-24-24-24s-24 10.7-24 24v198.1l-72.2-72.2c-9.4-9.4-24.6-9.4-33.9 0-9.4 9.4-9.4 24.6 0 33.9l113.1 113.2 0 0c4.3 4.3 10.3 7 17 7s12.6-2.7 17-7l0 0 113.1-113.1c9.4-9.4 9.4-24.6 0-34z");
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    gap: var(--std-gap);
+    overflow: hidden;
+}
+
+.editorContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: calc(var(--std-gap) * 2 / 3);
+}
+
+.editorTitle {
+    flex-shrink: 0;
+    /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.codeMirrorContainer {
+    flex-grow: 1;
+    /* font-size: 16px; */
+    overflow: hidden;
+}
+
+#filePicker {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    main {
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .codeMirrorContainer {
+        min-height: 3lh;
+        max-height: 40svh;
+    }
+}
+
+@media (max-width: 550px) {
+    button > span {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--gray-10);
+    }
+    
+    #doubleTapHint {
+        color: var(--gray-95);
+        background-color: var(--blue-60);
+    }
+
+    button {
+        color: var(--gray-05);
+        background-color: var(--blue-30);
+    }
+
+    button:hover {
+        background-color: var(--blue-30-08);
+    }
+
+    button[disabled] {
+        color: var(--gray-95);
+        background-color: var(--gray-30);
+    }
+
+    .editorTitle {
+        color: var(--blue-30);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    button {
+        color: var(--gray-95);
+        background-color: var(--blue-60);
+    }
+
+    #doubleTapHint {
+        color: var(--gray-05);
+        background-color: var(--blue-30);
+    }
+
+    button:hover {
+        background-color: var(--blue-50);
+    }
+
+    button[disabled] {
+        color: var(--gray-05);
+        background-color: var(--gray-80);
+    }
+}

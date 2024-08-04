@@ -1,0 +1,74 @@
+{
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "author": "Stereo.Luigi99 & Yonga",
+    "background": {
+        "service_worker": "js/background.js"
+        // firefox
+        // "scripts": [ "js/background.js" ]
+    },
+    // firefox
+    // "browser_specific_settings": {
+    //     "gecko": {
+    //         "id": "stereo.luigi99-191@techolay.net",
+    //         "strict_min_version": "128.0"
+    //     },
+    //     "gecko_android": {
+    //         "strict_min_version": "128.0"
+    //     }
+    // },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://techolay.net/sosyal/*"
+            ],
+            "js": [
+                "js/emojiPicker.js"
+            ],
+            "world": "MAIN",
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
+                "https://techolay.net/sosyal/*"
+            ],
+            "css": [
+                "css/styles.css",
+                "css/osb.min.css",
+                "css/categoryIcons.min.css"
+            ],
+            "js": [
+                "js/contentScript.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "description": "Tek olay, Techolay!",
+    "homepage_url": "https://techolay.net/sosyal/konu/2661/",
+    "host_permissions": [
+        "https://techolay.net/sosyal/*"
+    ],
+    "icons": {
+        "16": "img/extIcons/16.png",
+        "32": "img/extIcons/32.png",
+        "64": "img/extIcons/64.png",
+        "128": "img/extIcons/128.png"
+    },
+    "manifest_version": 3,
+    "name": "Project Techorium",
+    "permissions": [
+        "declarativeNetRequest",
+        "scripting",
+        "storage"
+    ],
+    "version": "1.49.3",
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "https://techolay.net/*"
+            ],
+            "resources": [ "*" ]
+        }
+    ]
+}

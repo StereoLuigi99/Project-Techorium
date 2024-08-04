@@ -1,0 +1,94 @@
+.CodeMirror {
+    height: 100%;
+}
+
+.CodeMirror-lines {
+    padding: 0;
+}
+
+.cm-s-default .cm-keyword-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+    background-color: var(--cm-selected-focused);
+}
+
+.CodeMirror-selected {
+    background-color: var(--cm-selected);
+}
+
+.cm-theme-override .cm-s-default .cm-error {
+    background-color: var(--error-underline-background);
+    text-decoration: var(--error-underline-red) wavy underline;
+}
+
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
+    display: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .CodeMirror,
+    .codeMirrorContainer {
+        background-color: var(--gray-05);
+    }
+
+    .CodeMirror-cursor {
+        border-left-color: var(--gray-95);
+    }
+
+    .CodeMirror-gutters {
+        background-color: var(--gray-20);
+        border-color: var(--gray-10);
+    }
+
+    .cm-theme-override .cm-s-default .CodeMirror-line {
+        color: var(--gray-90);
+    }
+
+    .CodeMirror-activeline-background {
+        background-color: var(--gray-20);
+    }
+
+    .CodeMirror-linenumber {
+        color: var(--gray-90-06);
+    }
+
+    .CodeMirror-overlayscroll-horizontal div,
+    .CodeMirror-overlayscroll-vertical div {
+        background: var(--gray-50);
+    }
+
+    .CodeMirror-overlayscroll-horizontal div:hover,
+    .CodeMirror-overlayscroll-vertical div:hover {
+        background: var(--gray-80);
+    }
+
+    .cm-s-default .cm-keyword,
+    .cm-s-default .cm-keyword-link {
+        color: var(--blue-30);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .codeMirrorContainer {
+        border: 1px solid black;
+    }
+
+    .CodeMirror-overlayscroll-horizontal div,
+    .CodeMirror-overlayscroll-vertical div {
+        background: var(--gray-50);
+    }
+
+    .CodeMirror-overlayscroll-horizontal div:hover,
+    .CodeMirror-overlayscroll-vertical div:hover {
+        background: var(--gray-30);
+    }
+
+    .cm-s-default .cm-keyword,
+    .cm-s-default .cm-keyword-link {
+        color: var(--blue-60);
+    }
+}

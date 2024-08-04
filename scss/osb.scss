@@ -1,0 +1,78 @@
+// do not format this file
+
+// class x y isOther
+$osbs: (
+    windows         -2      -234,
+    windows-7       -254    -216,
+    windowsxp       -110    -234,
+    windowsvista    -92     -234,
+    msie            -254    -126,
+    win81           -236    -216,
+    safari          -110    -180,
+    opera           -57     -162,
+    chrome          -74     -36,
+    chromium        -92     -36,
+    brave           -236    -18,
+    avast           -2      -18,
+    android         -146    0,
+    linux           -164    -108,
+    linux-gentoo    -254    -108,
+    edge            -164    -54,
+    edge1           -182    -54,
+    netscape        -146    -144,
+    firefox         -38     -72,
+    firefox1        -56     -72,
+    unknown         -20     -216,
+    linux-archlinux -182    -108,
+    iphone          -2      -54     true,
+    linux-ubuntu    -146    -71.5   true,
+    linux-redhat    -92     -72     true,
+    linux-mandriva  -74     -72     true,
+    morphos         -92     -90     true,
+    linuxmint       -183    -72     true,
+    pythonurllib    -182    -126    true,
+    macosx          -236    -72     true,
+    linux-slackware -110    -72     true,
+);
+
+@mixin osb-size {
+    width: 16px;
+    height: 16px;
+}
+
+@mixin osb() {
+    $commons: ();
+    $others: ();
+
+    @each $osb, $x, $y, $isOther in $osbs {
+        @if not $isOther {
+            $commons: append($commons, unquote(".#{$osb}"), comma);
+        }
+        @else {
+            $others: append($others, unquote(".#{$osb}"), comma);
+        }
+    }
+
+    img:is(#{$commons}) {
+        @include osb-size;
+        background-image: url("chrome-extension://__MSG_@@extension_id__/img/osb/common.png"), url("moz-extension://__MSG_@@extension_id__/img/osb/common.png");
+    }
+    img:is(#{$others}) {
+        @include osb-size;
+        background-image: url("chrome-extension://__MSG_@@extension_id__/img/osb/other.png"), url("moz-extension://__MSG_@@extension_id__/img/osb/other.png");
+    }
+}
+
+@mixin osb-positions() {
+    @each $osb, $x, $y, $isOther in $osbs {
+        img.#{$osb} {
+            background-position: #{$x}px #{$y}px;
+        }
+    }
+}
+
+
+html.s_ptosb {
+    @include osb();
+    @include osb-positions();
+}

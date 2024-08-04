@@ -1,0 +1,85 @@
+html.s_ptbt {
+    /* TODO: */
+}
+
+.input.emoji-container {
+    display: none;
+}
+html.s_pte {
+    /* &:not(.s_pte) .input.emoji-container {
+        display: none;
+    } */
+    .input.emoji-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(24px, 1fr));
+        gap: 6px;
+        padding: 10px;
+        margin-top: 10px;
+        & > img {
+            width: 24px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            &:hover {
+                transform: scale(1.25);
+            }
+        }
+    }
+}
+
+html.s_ptg .avatar img {
+    object-fit: cover !important;
+}
+
+html.s_pthosb .message-userExtras > .pairs--justified.pairs--noColon:has(.iconspart) {
+    display: none !important;
+}
+
+html.s_pths .message-signature {
+    display: none !important;
+}
+
+html.s_pti {
+    .p-header-inner,
+    .p-nav-inner,
+    .p-sectionLinks-inner,
+    .p-body-inner,
+    .p-footer-inner {
+        max-width: 1200px !important;
+    }
+    .button.button--cta {
+        color: #fff !important;
+        background: #b37110 !important;
+        border-color: #f39e25 #da840c #da840c #f39e25 !important;
+        &.button--splitTrigger {
+            & > .button-text {
+                border-right-color: #da840c !important;
+            }
+            & > .button-menu {
+                border-left-color: #f39e25 !important;
+            }
+        }
+        &:not(.button--splitTrigger),
+        &.button--splitTrigger > .button-text,
+        &.button--splitTrigger > .button-menu {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: #d48712 !important;
+            }
+        }
+    }
+}
+
+html.s_ptl {
+    .p-header-logo,
+    .p-nav-smallLogo {
+        & > a[href="/sosyal/"] > img {
+            /* background-image: url("chrome-extension://__MSG_@@extension_id__/img/dijitalfikir.png"), url("moz-extension://__MSG_@@extension_id__/img/dijitalfikir.png") !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important; */
+            width: 275px !important;
+            height: auto !important;
+            /* height: 60px !important; */
+        }
+    }
+}
