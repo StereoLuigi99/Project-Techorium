@@ -117,7 +117,7 @@ window.onload = async function () {
     chrome.storage.local.set({ ["usertheme"]: e.target.value });
   });
 
-  var url = "https://visual917.github.io/versions/ahmet.txt"; // Yes, that's my name.
+  var url = "https://iyonga.github.io/versions/ahmet.txt"; // Yes, that's my name.
   var res = await fetch(url);
   var data = await res.text();
   var currentVersion = "1.49.7";

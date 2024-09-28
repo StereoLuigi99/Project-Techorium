@@ -22,6 +22,10 @@
   max-width: 1200px !important;
 }
 
+body {
+  max-width: 1200px !important;
+}
+
 .button.button--cta, a.button.button--cta {
   color: #fff !important;
   background: #b37110 !important;
