@@ -9,10 +9,10 @@ window.onload = async function () {
   console.log("Hi");
   var settings = [
     {
-      id: "buttonTopColor",
+      id: "headerColor",
       imgSrcOn: "techorium-popup/toggle-on.png",
       imgSrcOff: "techorium-popup/toggle-off.png",
-      storageKey: "buttonTopColorStatus",
+      storageKey: "headerColorStatus",
       label: "Logo bölümündeki mavi renk teması",
       onEnable: function () {
         console.log("Özellik açıldı!");
@@ -22,7 +22,7 @@ window.onload = async function () {
       },
     },
     {
-      id: "buttonTopColor",
+      id: "osBrowser",
       imgSrcOn: "techorium-popup/toggle-on.png",
       imgSrcOff: "techorium-popup/toggle-off.png",
       storageKey: "osBrowserStatus",
@@ -35,7 +35,7 @@ window.onload = async function () {
       },
     },
     {
-      id: "buttonTopColor",
+      id: "signatureHide",
       imgSrcOn: "techorium-popup/toggle-on.png",
       imgSrcOff: "techorium-popup/toggle-off.png",
       storageKey: "signatureStatus",
@@ -48,10 +48,10 @@ window.onload = async function () {
       },
     },
     {
-      id: "buttonTopColor",
+      id: "changeOSIcons",
       imgSrcOn: "techorium-popup/toggle-on.png",
       imgSrcOff: "techorium-popup/toggle-off.png",
-      storageKey: "changeIcons",
+      storageKey: "changeOS_Icons",
       label: "İşletim sistemi kategori ikonlarını iyileştir",
       onEnable: function () {
         console.log("Özellik açıldı!");
@@ -61,11 +61,24 @@ window.onload = async function () {
       },
     },
     {
-      id: "buttonTopColor",
+      id: "changeTLogo",
       imgSrcOn: "techorium-popup/toggle-on.png",
       imgSrcOff: "techorium-popup/toggle-off.png",
-      storageKey: "changeTLogo",
+      storageKey: "changeTLogoStatus",
       label: "Özel Techolay logosunu kullan",
+      onEnable: function () {
+        console.log("Özellik açıldı!");
+      },
+      onDisable: function () {
+        console.log("Özellik kapatıldı!");
+      },
+    },
+    {
+      id: "techolayOldTheme",
+      imgSrcOn: "techorium-popup/toggle-on.png",
+      imgSrcOff: "techorium-popup/toggle-off.png",
+      storageKey: "techolayOldThemeStatus",
+      label: "Eski Techolay teması (3507Enes/Wyltre)",
       onEnable: function () {
         console.log("Özellik açıldı!");
       },
@@ -120,7 +133,7 @@ window.onload = async function () {
   var url = "https://iyonga.github.io/versions/ahmet.txt"; // Yes, that's my name.
   var res = await fetch(url);
   var data = await res.text();
-  var currentVersion = "1.49.7";
+  var currentVersion = "1.50.0";
   var newVersion = data.trim();
   console.log("compar", currentVersion, newVersion);
   console.log("compar", currentVersion.length, newVersion.length);
@@ -129,7 +142,7 @@ window.onload = async function () {
   if (currentVersion != newVersion) {
     var xd = document.getElementById("updatetext");
     xd.style.cursor = "pointer";
-    xd.innerText = `Yeni sürüm ${newVersion} çıktı. Tıkla!`;
+    xd.innerText = `Sürüm: ${currentVersion} | Güncel değilsiniz.\nYeni sürüm ${newVersion} çıktı. Tıkla!`;
     xd.addEventListener("click", function () {
       window.open(
         "https://github.com/StereoLuigi99/Project-Techorium/releases/latest",

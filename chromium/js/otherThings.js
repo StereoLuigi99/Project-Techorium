@@ -1,56 +1,33 @@
-window.onload = function () {
+window.onload = async function () {
+  var url = "https://raw.githubusercontent.com/Wyltre/techolaydarkcss/refs/heads/main/style.css";
+  var res = await fetch(url);
+  var data = await res.text();
+  var oTCSS = data.trim();
   const settings = [
     {
-      key: "buttonTopColorStatus",
+      key: "headerColorStatus",
       styles: [
         {
-          condition: color => color === "rgb(25, 25, 25)",
           css: `
                         .p-header {
                             background: url(${chrome.runtime.getURL(
-                              "techolay-title-dark.jpg",
+                              "techolay-title.jpg",
                             )}) !important;
                         }
                         .p-nav {
                             background: url(${chrome.runtime.getURL(
-                              "techolay-title-dark.jpg",
+                              "techolay-title.jpg",
                             )}) !important;
                         }
                         .p-nav-scroller .hScroller-action.hScroller-action--end {
-                            background: linear-gradient(to right, rgba(30, 30, 30, 0) 0%, #003e8d 33%) !important;
+                            background: linear-gradient(to right, rgba(30, 30, 30, 0) 0%, #004bab 33%) !important;
                         }
                         .p-nav-scroller .hScroller-action.hScroller-action--start {
-                            background: linear-gradient(to right, #0052b9 66%, rgba(30, 30, 30, 0) 100%) !important;
+                            background: linear-gradient(to right, #004399 66%, rgba(30, 30, 30, 0) 100%) !important;
                         }
                         .p-nav-list .p-navEl:not(.is-selected) {
                             background: none !important;
-                        }
-                        .p-nav-list .p-navEl:not(.is-selected):not(.is-menuOpen):hover, .p-nav-list .p-navEl:not(.is-selected):not(.is-menuOpen) .p-navEl-link:hover, .p-nav-list .p-navEl:not(.is-selected):not(.is-menuOpen) .p-navEl-splitTrigger:hover {
-                            background: rgba(0, 0, 0, 0) !important;
-                        }
-                    `,
-        },
-        {
-          condition: color => color === "rgb(236, 236, 236)",
-          css: `
-                        .p-header {
-                            background: url(${chrome.runtime.getURL(
-                              "techolay-title-light.jpg",
-                            )}) !important;
-                        }
-                        .p-nav {
-                            background: url(${chrome.runtime.getURL(
-                              "techolay-title-light.jpg",
-                            )}) !important;
-                        }
-                        .p-nav-scroller .hScroller-action.hScroller-action--end {
-                            background: linear-gradient(to right, rgba(30, 30, 30, 0) 0%, #007eff 33%) !important;
-                        }
-                        .p-nav-scroller .hScroller-action.hScroller-action--start {
-                            background: linear-gradient(to right, #006edf 66%, rgba(30, 30, 30, 0) 100%) !important;
-                        }
-                        .p-nav-list .p-navEl:not(.is-selected) {
-                            background: none !important;
+                            color: hsl(204deg 100% 72.45%) !important;
                         }
                         .p-nav-list .p-navEl:not(.is-selected):not(.is-menuOpen):hover, .p-nav-list .p-navEl:not(.is-selected):not(.is-menuOpen) .p-navEl-link:hover, .p-nav-list .p-navEl:not(.is-selected):not(.is-menuOpen) .p-navEl-splitTrigger:hover {
                             background: rgba(0, 0, 0, 0) !important;
@@ -84,23 +61,31 @@ window.onload = function () {
       ],
     },
     {
-      key: "changeTLogo",
+      key: "changeTLogoStatus",
       styles: [
         {
           css: `
-.p-header-logo.p-header-logo--image > a[href="/sosyal/"] > img {
+.p-header-logo.p-header-logo--image > a[href="/sosyal/"] > picture > img {
     content: url(${chrome.runtime.getURL("techolay-dijitalfikir.png")}) !important;
     width: 275px !important;
     height: 59px !important;
     aspect-ratio: auto 275 / 59 !important;
 }
           
-.p-nav-smallLogo > a[href="/sosyal/"] > img {
+.p-nav-smallLogo > a[href="/sosyal/"] > picture > img {
     content: url(${chrome.runtime.getURL("techolay-dijitalfikir.png")}) !important;
     width: 280px !important;
     height: 20px !important;
 }
 `,
+        },
+      ],
+    },
+    {
+      key: "techolayOldThemeStatus",
+      styles: [
+        {
+          css: `${oTCSS}`,
         },
       ],
     },
@@ -110,12 +95,8 @@ window.onload = function () {
   chrome.storage.local.get(settings.map(s => s.key)).then(local => {
     settings.forEach(setting => {
       if (local[setting.key] === "1") {
-        const pageWrapper = document.querySelector(".p-pageWrapper");
-        const pageWrapperCS = getComputedStyle(pageWrapper);
-        const bgColor = pageWrapperCS.backgroundColor;
-
         setting.styles.forEach(style => {
-          if (!style.condition || style.condition(bgColor)) {
+          if (!style.condition) {
             const styleElem = document.createElement("style");
             styleElem.innerText = style.css;
             document.body.appendChild(styleElem);
