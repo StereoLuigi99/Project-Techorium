@@ -154,7 +154,7 @@ window.onload = function () {
     const data = await response.text();
     // "#top > div.p-body > div > div.p-body-main.p-body-main--withSidebar > div.p-body-content > div > form > div > div > div > div > div.message-cell.message-cell--user",
     const targetSelectors = ["h4.block-textHeader"];
-    var res = await fetch("https://visual917.github.io/versions/emojis.json");
+    var res = await fetch("https://iyonga.github.io/versions/emojis.json");
     var json = await res.text();
     const emojis = JSON.parse(json);
     targetSelectors.forEach(selector => {
