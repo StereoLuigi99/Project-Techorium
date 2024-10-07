@@ -67,9 +67,9 @@ window.onload = async function () {
           css: `
 .p-header-logo.p-header-logo--image > a[href="/sosyal/"] > picture > img {
     content: url(${chrome.runtime.getURL("techolay-dijitalfikir.png")}) !important;
-    width: 275px !important;
-    height: 59px !important;
-    aspect-ratio: auto 275 / 59 !important;
+    width: 270px !important;
+    height: 50px !important;
+    aspect-ratio: auto 270 / 50 !important;
 }
           
 .p-nav-smallLogo > a[href="/sosyal/"] > picture > img {
