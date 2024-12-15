@@ -133,7 +133,7 @@ window.onload = async function () {
   var url = "https://iyonga.github.io/versions/ahmet.txt"; // Yes, that's my name.
   var res = await fetch(url);
   var data = await res.text();
-  var currentVersion = "1.50.0";
+  var currentVersion = "1.50.1";
   var newVersion = data.trim();
   console.log("compar", currentVersion, newVersion);
   console.log("compar", currentVersion.length, newVersion.length);
