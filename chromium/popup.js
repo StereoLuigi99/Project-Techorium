@@ -85,6 +85,19 @@ window.onload = async function () {
       onDisable: function () {
         console.log("Özellik kapatıldı!");
       },
+    },
+    {
+      id: "lilBannerStatistics",
+      imgSrcOn: "techorium-popup/toggle-on.png",
+      imgSrcOff: "techorium-popup/toggle-off.png",
+      storageKey: "lilBannerStatus",
+      label: "İstatistik panelinde banner duvar kağıdı",
+      onEnable: function () {
+        console.log("Özellik açıldı!");
+      },
+      onDisable: function () {
+        console.log("Özellik kapatıldı!");
+      },
     }
     // daha fazla ayar gelebilir. buradan sonra otherThings.js'e eklenecek.
   ];
@@ -133,7 +146,7 @@ window.onload = async function () {
   var url = "https://iyonga.github.io/versions/ahmet.txt"; // Yes, that's my name.
   var res = await fetch(url);
   var data = await res.text();
-  var currentVersion = "1.50.1";
+  var currentVersion = "1.60.0";
   var newVersion = data.trim();
   console.log("compar", currentVersion, newVersion);
   console.log("compar", currentVersion.length, newVersion.length);

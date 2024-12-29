@@ -1,29 +1,3 @@
-@font-face {
-  font-family: "SFRoundedBold";
-  src: url("sf-font/SFRounded-Bold.eot");
-  src: url("sf-font/SFRounded-Bold.eot?#iefix") format("embedded-opentype"),
-    url("sf-font/SFRounded-Bold.woff2") format("woff2"),
-    url("sf-font/SFRounded-Bold.woff") format("woff"),
-    url("sf-font/SFRounded-Bold.ttf") format("truetype"),
-    url("sf-font/SFRounded-Bold.svg#SFRounded-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SFRoundedLight";
-  src: url("sf-font/SFRounded-Light.eot");
-  src: url("sf-font/SFRounded-Light.eot?#iefix") format("embedded-opentype"),
-    url("sf-font/SFRounded-Light.woff2") format("woff2"),
-    url("sf-font/SFRounded-Light.woff") format("woff"),
-    url("sf-font/SFRounded-Light.ttf") format("truetype"),
-    url("sf-font/SFRounded-Light.svg#SFRounded-Light") format("svg");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
 html {
   width: 525px;
   height: 350px;
@@ -39,7 +13,7 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -63,7 +37,7 @@ body {
 
 .descriptionText {
   font-size: 15px;
-  font-family: "SFRoundedLight";
+  font-family: "SUSE", light;
   line-height: 1;
   margin: 0;
 }
@@ -87,6 +61,11 @@ body {
 
 #settingsTitle {
   font-size: xx-large;
-  font-family: "SFRoundedBold";
+  font-family: "SUSE", bold;
   margin-bottom: 20px;
+}
+
+#updatetext,
+#uttext {
+  font-family: "SUSE", bold;
 }
