@@ -1,51 +1,52 @@
 # Project Techorium
-Evet, o eklenti yapan Mario'yu hatırlıyor musunuz? Herhalde hayır ama o benim.
-2024 öncesi Project TechnOSpat ve Project Quettapat'tan sonra üçlemeyi bitirecek eklenti artık burada.
+Techolay Sosyal deneyiminizi iyileştirmek için yapılan Project Techorium, birkaç ekleme ile beraber daha güzel bir deneyim vermek amacındadır.
+Aslı sadece OS kategori ikonlarını değiştirme amacı olan Project TechnOSpat'tan başlayıp daha gelişmiş olan Project Quettapat'ın Techolay Sosyal'e sıçramasıdır. Her ikisini de tek saniyede nakavt eden, gelişmiş bir eklentidir.
+
+[![Foo](https://github.com/user-attachments/assets/9e72da57-2ed9-47d2-b06b-c82a75bfde6e)](https://chromewebstore.google.com/detail/project-techorium/ndlgcleajbcbklofcefeghigioafcjhb?hl=tr)
 
 Eklentinin getirdiği başlıca özellikler şunlar:
 
-- GIF profil fotoğrafları (Nizel G'nin orijinal kodu Techolay için revize edildi.)
+- ~~GIF profil fotoğrafları (Nizel G'nin orijinal kodu Techolay için revize edildi.)~~ <br />
+  Techolay Sosyal'de hazır bulunduğu için devre dışı bıraktım, olası bir durumda açmak için yapılması gerekenler aşağıda bulunuyor.
+
 - Yeni Techolay logosu (Logo için dijitalfikir'e sonsuz teşekkürler!)
 - İşletim sistemi kategorilerinde yeni logolar (Bkz. Project TechnOSpat)
-- Kullanıcı altındaki İS/tarayıcı kısmında yeni ikonlar!
-- Ayarlarını düzenleyebileceğiniz pop-up (Pop-up'ın büyük ölçüde gelişiminden ötürü Yonga'ya teşekkürler!)
+- Kullanıcı altındaki İS/tarayıcı kısmında yeni ikonlar
+- Eklenti ayarlarını düzenleyebileceğiniz pop-up (Pop-up'ın büyük ölçüde gelişiminden ötürü Yonga'ya teşekkürler!)
+- Pop-up aracılığıyla özel CSS ekleme
+- Ana sayfa ve profil sayfanıza özel duvar kağıdı ekleme. Sadece siz görebilirsiniz. :d
+- Eski Techolay teması (3507Enes/Wyltre'a teşekkürler!)
 
 ![project-techorium-1](https://github.com/StereoLuigi99/Project-Techorium/assets/166461481/d40e3b83-1a12-48fb-b45b-f1758e26bcf2)
 
-## GIF Fotoğrafları Hakkında
-
-Eklentiyi yükleyen herkes GIF profil fotoğrafları yapıp kullanabilir. Yükleyenler aynı zamanda herkesin GIF'ini görebilirler.
-Eklentisi yüklü olmayanlarda fotoğrafınız, GIF'in ilk karesi olarak görünür. O yüzden GIF'inizi iyi seçin.
-
-Tavsiye edilen GIF'inizi bulup EZGIF'ten 384x384 olarak yeniden boyutlandırmanızdır. Yapmak zorunlu değil fakat GIF çalışmazsa çözüm budur.
-
-Firefox için çalışmazsa sürümünüzün 113.0 ve üstü olması gerektiğini hatırlatmam gerekir.
-Eğer 113.0 ve üstüyse aşağıdaki adımları takip edin:
-- Eklentiyi kurduktan sonra Techolay'a girin.
-- Sağ üst menüden eklenti kendini gösterecek, altında küçük bir bildirim kutusu ile, eklentiye tıklayın.
-- Eklentiye Techolay'da okuma ve düzenleme yapma yetkisi verin.
-Bu GIF fotoğrafları kullanıcı tarafında bir değişiklik olup sunucuyu kastırmaz, o konuda içiniz rahat olsun.
-
 ## Resimler/Ekran Görüntüleri
 
+![project-techorium-ss](https://github.com/user-attachments/assets/5cac382e-deb9-45e7-901d-a0cd0af36e96)
+
 ## Yükleme Aşamaları
-### Chromium (Chrome, Edge, Opera, Opera GX vb.)
+### Chromium (Chrome, Edge, Opera, Brave vb.)
 - ZIP dosyalarını klasöre çıkartın.
 - Tarayıcının eklentiler bölümüne girin.
 - Geliştirici modunu açın ve paketlenmemiş eklenti yükleme tuşuna basın.
 - Eklentinin çıkartıldığı klasörü seçin.
 
-### Mozilla Firefox
-- XPI dosyasını tarayıcıya sürükleyip eklentiyi kurun.
-- Eklentiyi kurduktan sonra Techolay'a girin.
-- Sağ üst menüden eklenti kendini gösterecek, altında küçük bir bildirim kutusu ile, eklentiye tıklayın.
-- Eklentiye Techolay'da okuma ve düzenleme yapma yetkisi verin.
+## GIF Özelliği Nasıl Açılır?
+Bir gün Recep Baltaş veya herhangi bir yönetici GIF özelliğini devre dışı bıraktı diyelim, GIF özelliğini eklentiden nasıl geri açacaksınız?
+Bunun için Chrome Web Mağazası'ndan kurduysanız onu kaldırıp geleneksel yolla kurmanız lazım.
+- `manifest.json` dosyasına girin.
+- Müsait bir yere aşağıdaki kod bloğunu yapıştırın. Eğer hata verirse yanlış yapıştırmış olabilirsiniz.
 
-### Brave
-- ZIP dosyalarını klasöre çıkartın.
-- Tarayıcının eklentiler bölümüne girin.
-- Geliştirici modunu açın ve paketlenmemiş eklenti yükleme tuşuna basın.
-- Eklentinin çıkartıldığı klasörü seçin.
+```
+"declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+```
 
 ## Emeği Geçenler
 - Technopat'taki GIF eklentisini hazırladığı için Nizel G'ye,
