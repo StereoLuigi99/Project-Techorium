@@ -2,7 +2,7 @@
 Techolay Sosyal deneyiminizi iyileştirmek için yapılan Project Techorium, birkaç ekleme ile beraber daha güzel bir deneyim vermek amacındadır.
 Aslı sadece OS kategori ikonlarını değiştirme amacı olan Project TechnOSpat'tan başlayıp daha gelişmiş olan Project Quettapat'ın Techolay Sosyal'e sıçramasıdır. Her ikisini de tek saniyede nakavt eden, gelişmiş bir eklentidir.
 
-Şu anki Chrome Web Mağazası sürümü: 1.50.0.
+Şu anki Chrome Web Mağazası sürümü: 1.50.0. Asıl sürüm 1.60.0.
 
 [![Foo](https://github.com/user-attachments/assets/9e72da57-2ed9-47d2-b06b-c82a75bfde6e)](https://chromewebstore.google.com/detail/project-techorium/ndlgcleajbcbklofcefeghigioafcjhb?hl=tr)
 
