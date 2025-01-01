@@ -1,4 +1,49 @@
 document.addEventListener("DOMContentLoaded", async function (event) {
+  const icon_styles = [
+    { selector: "img.windows", offset: "-2px -234px", filename: "common.png" },
+    { selector: "img.windows-7", offset: "-254px -216px", filename: "common.png" },
+    { selector: "img.windowsxp", offset: "-110px -234px", filename: "common.png" },
+    { selector: "img.windowsvista", offset: "-92px -234px", filename: "common.png" },
+    { selector: "img.msie", offset: "-254px -126px", filename: "common.png" },
+    { selector: "img.win81", offset: "-236px -216px", filename: "common.png" },
+    { selector: "img.iphone", offset: "-2px -54px", filename: "other.png" },
+    { selector: "img.safari", offset: "-110px -180px", filename: "common.png" },
+    { selector: "img.opera", offset: "-57px -162px", filename: "common.png" },
+    { selector: "img.chrome", offset: "-74px -36px", filename: "common.png" },
+    { selector: "img.chromium", offset: "-92px -36px", filename: "common.png" },
+    { selector: "img.brave", offset: "-236px -18px", filename: "common.png" },
+    { selector: "img.avast", offset: "-2px -18px", filename: "common.png" },
+    { selector: "img.android", offset: "-146px 0px", filename: "common.png" },
+    { selector: "img.linux", offset: "-164px -108px", filename: "common.png" },
+    { selector: "img.linux-ubuntu", offset: "-146px -71.5px", filename: "other.png" },
+    { selector: "img.linux-gentoo", offset: "-254px -108px", filename: "common.png" },
+    { selector: "img.linux-redhat", offset: "-92px -72px", filename: "other.png" },
+    { selector: "img.linux-mandriva", offset: "-74px -72px", filename: "other.png" },
+    { selector: "img.morphos", offset: "-92px -90px", filename: "other.png" },
+    { selector: "img.linuxmint", offset: "-183px -72px", filename: "other.png" },
+    { selector: "img.pythonurllib", offset: "-182px -126px", filename: "other.png" },
+    { selector: "img.macosx", offset: "-236px -72px", filename: "other.png" },
+    { selector: "img.linux-slackware", offset: "-110px -72px", filename: "other.png" },
+    { selector: "img.edge", offset: "-164px -54px", filename: "common.png" },
+    { selector: "img.edge1", offset: "-182px -54px", filename: "common.png" },
+    { selector: "img.netscape", offset: "-146px -144px", filename: "common.png" },
+    { selector: "img.firefox", offset: "-38px -72px", filename: "common.png" },
+    { selector: "img.firefox1", offset: "-56px -72px", filename: "common.png" },
+    { selector: "img.unknown", offset: "-20px -216px", filename: "common.png" },
+    { selector: "img.linux-archlinux", offset: "-182px -108px", filename: "common.png" },
+  ];
+
+  if (Array.isArray(icon_styles) && icon_styles.length > 0) {
+    icon_styles.forEach((style) => {
+      const icons = document.querySelectorAll(style.selector);
+      icons.forEach((icon) => {
+        icon.style.background = `url(${chrome.runtime.getURL(`osbrowser/${style.filename}`)}) ${style.offset}`;
+        icon.width = 16;
+        icon.height = 16;
+      });
+    });
+  }
+
   const replacements = [
     // Windows Bölümü
     {

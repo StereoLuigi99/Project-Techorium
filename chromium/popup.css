@@ -1,9 +1,6 @@
-html {
+body {
   width: 525px;
   height: 350px;
-}
-
-body {
   margin: 0;
   padding: 0;
 }
