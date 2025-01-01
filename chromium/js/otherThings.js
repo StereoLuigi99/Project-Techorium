@@ -1,4 +1,4 @@
-window.onload = async function () {
+window.addEventListener('load', async function () {
   var url = "https://raw.githubusercontent.com/Wyltre/techolaydarkcss/refs/heads/main/style.css";
   var res = await fetch(url);
   var data = await res.text();
@@ -504,4 +504,4 @@ ul.tabPanes > li > div > div > div > div.contentRow-minor > dl.pairs.pairs--just
   //const observer = new MutationObserver(addEmojiPickerAndEmojis);
   //observer.observe(document.body, { childList: true, subtree: true });
   //addEmojiPickerAndEmojis();
-};
+});

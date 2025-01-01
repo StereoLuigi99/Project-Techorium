@@ -3,6 +3,11 @@
   "name": "Project Techorium",
   "description": "Stereo.Luigi99 ve Yonga tarafından... Tek olay, Techolay!",
   "homepage_url": "https://techolay.net/sosyal/konu/techolay-icin-gif-ve-daha-fazlasi-project-techorium.2661/",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "stereo.luigi99-191@techolay.net"
+    }
+  },
   "version": "1.60.0",
   "icons": {
     "16": "techorium-icons/icon16.png",
@@ -25,7 +30,7 @@
     {
       "js": ["/js/scriptOS.js", "/js/otherThings.js"],
       "matches": ["https://techolay.net/*", "https://www.techolay.net/*"],
-      "css": ["/css/osBrowser.css", "/css/otherThings.css"],
+      "css": ["/css/otherThings.css"],
       "run_at": "document_start"
     }
   ]
