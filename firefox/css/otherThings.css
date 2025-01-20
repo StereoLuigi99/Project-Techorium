@@ -1,0 +1,31 @@
+.avatar img {
+    object-fit: cover;
+}
+
+.p-header-inner {
+  max-width: 1200px !important;
+}
+
+.p-nav-inner {
+  max-width: 1200px !important;
+}
+
+.p-sectionLinks-inner {
+  max-width: 1200px !important;
+}
+
+.p-body {
+  background-size: cover !important;
+}
+
+.p-body-inner {
+  max-width: 1200px !important;
+}
+
+.p-footer-inner {
+  max-width: 1200px !important;
+}
+
+div.p-navgroup.p-account.p-navgroup--member > a.esek > i::after {
+  mask: url(https://techolay.net/sosyal/styles/fa/regular/paint-brush.svg?v=5.15.3) no-repeat center !important;
+}

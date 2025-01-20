@@ -1,0 +1,71 @@
+html {
+  width: 525px;
+  height: 350px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#settingsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.settingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.settingButton {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.descriptionText {
+  font-size: 15px;
+  font-family: "SUSE", light;
+  line-height: 1;
+  margin: 0;
+}
+
+#darkModeButton {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+}
+
+.darkMode {
+  background-color: black;
+  color: white;
+}
+
+.lightMode {
+  background-color: white;
+  color: black;
+}
+
+#settingsTitle {
+  font-size: xx-large;
+  font-family: "SUSE", bold;
+  margin-bottom: 20px;
+}
+
+#updatetext,
+#uttext {
+  font-family: "SUSE", bold;
+}

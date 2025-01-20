@@ -247,6 +247,9 @@ window.onload = async function () {
                         .p-nav-scroller .hScroller-action.hScroller-action--start {
                             background: linear-gradient(to right, #000000 66%, rgba(30, 30, 30, 0) 100%) !important;
                         }
+                        .p-nav-scroller .hScroller-action {
+                          color: #c7c7c7 !important;
+                        }
                         .p-nav-list .p-navEl:not(.is-selected) {
                             background: none !important;
                             color: hsl(0deg 0% 72.45%) !important;
@@ -277,6 +280,9 @@ window.onload = async function () {
                         }
                         .p-nav-scroller .hScroller-action.hScroller-action--start {
                             background: linear-gradient(to right, #a50000 66%, rgba(30, 30, 30, 0) 100%) !important;
+                        }
+                        .p-nav-scroller .hScroller-action {
+                          color: #ffabab !important;
                         }
                         .p-nav-list .p-navEl:not(.is-selected) {
                             background: none !important;

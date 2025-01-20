@@ -1,0 +1,191 @@
+img.windows {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -2px -234px;
+    width: 16px;
+    height: 16px;
+}
+
+img.windows-7 {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -254px -216px;
+    width: 16px;
+    height: 16px;
+}
+
+img.windowsxp {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -110px -234px;
+    width: 16px;
+    height: 16px;
+}
+
+img.windowsvista {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -92px -234px;
+    width: 16px;
+    height: 16px;
+}
+
+img.msie {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -254px -126px;
+    width: 16px;
+    height: 16px;
+}
+
+img.win81 {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -236px -216px;
+    width: 16px;
+    height: 16px;
+}
+
+img.windows-7 {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -254 -216px;
+    width: 16px;
+    height: 16px;
+}
+
+img.iphone {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/other.png") -2px -54px;
+    width: 16px;
+    height: 16px;
+}
+
+img.safari {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -110px -180px;
+    width: 16px;
+    height: 16px;
+}
+
+img.opera {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -57px -162px;
+    width: 16px;
+    height: 16px;
+}
+
+img.chrome {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -74px -36px;
+    width: 16px;
+    height: 16px;
+}
+
+img.chromium {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -92px -36px;
+    width: 16px;
+    height: 16px;
+}
+
+img.brave {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -236px -18px;
+    width: 16px;
+    height: 16px;
+}
+
+img.avast {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -2px -18px;
+    width: 16px;
+    height: 16px;
+}
+
+img.android {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -146px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+img.linux {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -164px -108px;
+    width: 16px;
+    height: 16px;
+}
+
+img.linux-ubuntu {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/other.png") -146px -71.5px;
+    width: 16px;
+    height: 16px;
+}
+
+img.linux-gentoo {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -254px -108px;
+    width: 16px;
+    height: 16px;
+}
+
+img.linux-redhat {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/other.png") -92px -72px;
+    width: 16px;
+    height: 16px;
+}
+
+img.linux-mandriva {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/other.png") -74px -72px;
+    width: 16px;
+    height: 16px;
+}
+
+img.morphos {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/other.png") -92px -90px;
+    width: 16px;
+    height: 16px;
+}
+
+img.linuxmint {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/other.png") -183px -72px;
+    width: 16px;
+    height: 16px;
+}
+
+img.pythonurllib {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/other.png") -182px -126px;
+    width: 16px;
+    height: 16px;
+}
+
+img.macosx {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/other.png") -236px -72px;
+    width: 16px;
+    height: 16px;
+}
+
+img.linux-slackware {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/other.png") -110px -72px;
+    width: 16px;
+    height: 16px;
+}
+
+img.edge {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -164px -54px;
+    width: 16px;
+    height: 16px;
+}
+
+img.edge1 {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -182px -54px;
+    width: 16px;
+    height: 16px;
+}
+
+img.netscape {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -146px -144px;
+    width: 16px;
+    height: 16px;
+}
+
+img.firefox {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -38px -72px;
+    width: 16px;
+    height: 16px;
+}
+
+img.firefox1 {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -56px -72px;
+    width: 16px;
+    height: 16px;
+}
+
+img.unknown {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -20px -216px;
+    width: 16px;
+    height: 16px;
+}
+
+img.linux-archlinux {
+    background: url("moz-extension://__MSG_@@extension_id__/osbrowser/common.png") -182px -108px;
+    width: 16px;
+    height: 16px;
+}
